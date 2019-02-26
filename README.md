@@ -12,3 +12,5 @@ For an accurate description of the BaryonEffectsEmulator refer to the research p
 - **Example**
   * *get_boost_example.py*: example code for the generation of the boost.
   * *plot_example.py*: example code for plotting the boost.
+
+##Usage
