@@ -9,8 +9,11 @@ MyBCM = {'f_b': 0.14, 'logMc': 14, 'mu': 0.4, 'theta_ej':4.0, 'eta_tot': 0.3, 'e
 #Define input redshifts
 z=[0.3,0.9,1.5]
 
+#Define wavenumbers of evaluation
+keval=np.logspace(-1,1,1000)
+
 #Calculate the boosts
-result=get_boost(z,MyBCM)
+result=get_boost(z,MyBCM,keval)
 
 #Print some results
 print 'k-values: \n'+str(result['k'])+'\n'
