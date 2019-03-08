@@ -38,7 +38,7 @@ The _k_-vector is an optional parameter. If none is given the power suppression 
 
 As last step one should simply call the function *get_boost* and access the results as follows:
 ```ruby
-result=get_boost(z,MyBCM)
+result=get_boost(z,MyBCM,keval)
 k=result['k']
 boost0=result['z0']
 boost1=result['z1']
