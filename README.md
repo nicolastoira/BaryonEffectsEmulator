@@ -28,11 +28,14 @@ If the python file *BaryonEffectsEmulator.py* is located in a different folder, 
 import sys
 sys.path.insert(0, '/path/to/BaryonEffectsEmulator')
 ```
-Once this is done one has to define a baryonic correction model and the redshifts at which the boost has to be calculated, e.g.
+Once this is done one has to define a baryonic correction model, the redshifts, and the wavenumbers at which the boost has to be calculated, e.g.
 ```ruby
 MyBCM = {'f_b': 0.14, 'logMc': 14, 'mu': 0.4, 'theta_ej':4.0, 'eta_tot': 0.3, 'eta_cga': 0.6}
 z=[0.3,0.9,1.5]
+k=np.logspace(-2,2,1000)
 ```
+The _k_-vector is an optional parameter. If none is given the power suppression will be evaluated at the standard _k_-values related to the emulator construction.
+
 As last step one should simply call the function *get_boost* and access the results as follows:
 ```ruby
 result=get_boost(z,MyBCM)
