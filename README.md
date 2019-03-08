@@ -32,7 +32,7 @@ Once this is done one has to define a baryonic correction model, the redshifts, 
 ```ruby
 MyBCM = {'f_b': 0.14, 'logMc': 14, 'mu': 0.4, 'theta_ej':4.0, 'eta_tot': 0.3, 'eta_cga': 0.6}
 z=[0.3,0.9,1.5]
-k=np.logspace(-2,2,1000)
+k=np.logspace(-1,1,1000)
 ```
 The _k_-vector is an optional parameter. If none is given the power suppression will be evaluated at the standard _k_-values related to the emulator construction.
 
