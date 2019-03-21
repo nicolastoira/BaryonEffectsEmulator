@@ -34,7 +34,7 @@ MyBCM = {'f_b': 0.14, 'logMc': 14, 'mu': 0.4, 'theta_ej':4.0, 'eta_tot': 0.3, 'e
 z=[0.3,0.9,1.5]
 k=np.logspace(-1,1,1000)
 ```
-The _k_-vector is an optional parameter. If it is not given the power suppression will be evaluated at the standard _k_-values related to the emulator construction. On the other hand, a linear interpolation is performed for _k_-values outside of the standard range.
+The _k_-vector is an optional parameter. If it is not given the power suppression will be evaluated at the standard _k_-values related to the emulator construction. On the other hand, a linear extrapolation is performed for _k_-values outside of the standard range.
 
 As last step one should simply call the function *get_boost* and access the results as follows:
 ```ruby
